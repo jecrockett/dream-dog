@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -25,5 +26,5 @@ group :development do
 end
 
 group :production do
-  gem 'rails_12factor'  
+  gem 'rails_12factor'
 end
