@@ -1,11 +1,12 @@
-<h1>Which of these looks like your dream dog?</h1>
+<h1>Which of these looks like your perfect pet?</h1>
 
-<div class="">
-  <% @twitter.inspiration("MixedDogs").each do |tweet| %>
-    <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
-    <div>
-      <%= image_tag(@pic_url, class: "feed-pic") %>
-    </div>
-    <%= link_to "Find Similar Adoptable Dogs", dogs_path(image: @pic_url) %>
+<div>
+  <% @twitter.inspiration("doggy-inspiration").each do |tweet| %>
+    <% if tweet.to_h[:entities] && tweet.to_h[:entities][:media] %>
+      <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
+      <%= link_to pets_path(image: @pic_url) do %>
+        <%= image_tag(@pic_url, class: "feed-pic") %>
+      <% end %>
+    <% end %>
   <% end %>
 </div>

@@ -3,7 +3,7 @@
 <div class="">
   <% @twitter.inspiration("MixedDogs").each do |tweet| %>
     <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
-    <%= link_to(dogs_path, target:"_blank") do %>
+    <%= link_to(dogs_path(image: @pic_url, target:"_blank") do %>
       <%= image_tag(@pic_url, class: "feed-pic") %>
     <% end %>
   <% end %>

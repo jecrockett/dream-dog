@@ -9,8 +9,12 @@ class TwitterService
     end
   end
 
-  def inspiration(user)
-    @client.user_timeline(user)
+  def inspiration(list)
+    @client.list_timeline("jecrockett12", list, include_rts: false, count: 40)
+  end
+
+  def show_pics(user)
+    @client.user_timeline(user, include_rts: false)
   end
 
 end

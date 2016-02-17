@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
   def self.find_or_create_from_auth(auth)
-    binding.pry
     user = User.find_or_create_by(uid: auth['uid'], provider: auth['provider'])
 
     user.nickname = auth['info']['nickname']
