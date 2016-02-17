@@ -1,0 +1,7 @@
+<h1>Here are your potential dream dogs!</h1>
+
+<% @dogs.each do |dog| %>
+  <%= link_to dog["pageUrl"] do %>
+    <%= image_tag(dog["imageUrl"], class: "feed-pic") %>
+  <% end %>
+<% end %>
