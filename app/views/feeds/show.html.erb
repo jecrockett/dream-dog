@@ -1,0 +1,9 @@
+<h1>Which of these looks like your dream dog?</h1>
+
+<div class="">
+  <% @twitter.inspiration("MixedDogs").each do |tweet| %>
+    <div>
+      <%= image_tag(tweet.to_h[:entities][:media][0][:media_url_https]) %>
+    </div>
+  <% end %>
+</div>
