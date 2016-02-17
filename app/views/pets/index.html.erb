@@ -1,7 +1,13 @@
-<h1>Here are your potential dream dogs!</h1>
+<h1>Here are your potential perfect pets!</h1>
 
-<% @pets.each do |dog| %>
-  <%= link_to dog["pageUrl"] do %>
-    <%= image_tag(dog["imageUrl"], class: "feed-pic") %>
+<% if @pets.nil? %>
+  <p>
+    Sorry! We couldn't find a suitable match.
+  </p>
+<% else %>
+  <% @pets.each do |dog| %>
+    <%= link_to dog["pageUrl"] do %>
+      <%= image_tag(dog["imageUrl"], class: "feed-pic") %>
+    <% end %>
   <% end %>
 <% end %>
