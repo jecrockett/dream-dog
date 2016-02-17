@@ -3,7 +3,8 @@
 <div class="">
   <% @twitter.inspiration("MixedDogs").each do |tweet| %>
     <div>
-      <%= image_tag(tweet.to_h[:entities][:media][0][:media_url_https]) %>
+      <%= image_tag(tweet.to_h[:entities][:media][0][:media_url_https], class: "feed-pic") %>
     </div>
   <% end %>
+  <%= link_to "Find Similar Adoptable Dogs", "#" %>
 </div>
