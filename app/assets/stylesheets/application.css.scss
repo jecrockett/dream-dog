@@ -14,6 +14,79 @@
  *= require_self
  */
 
+/* GENERAL STYLING */
+body {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+$darkgrayblue: #5c7482; //rgba(92, 116, 130, 100)
+$grayblue: #92acb5; //rgba(146, 172, 181, 100)
+$green: #bfdbbe; //rgba(191, 219, 190, 100)
+$tan: #e8dfd5; //rgba(232, 223, 213, 100)
+$pink: #ffd8dc; //rgba(255, 216, 220, 100)
+
+/* HOME PAGE */
+.home-wrapper {
+  text-align: center;
+  height: 100vh;
+  background-color: $darkgrayblue;
+}
+
+.home-content {
+  margin: 0 auto;
+  margin-bottom: 130px;
+  h1 {
+    margin-bottom: 20px;
+    color: $tan;
+  }
+  h2 {
+    margin-bottom: 50px;
+    color: white;
+  }
+  a {
+    color: $pink;
+    text-decoration: none;
+    border: 3px solid $pink;
+    border-radius: 6px;
+    padding: 20px;
+  }
+}
+
+/* DASHBOARD */
+.dashboard-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: $tan;
+  text-align: center;
+}
+
+.dashboard-content {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 380px;
+  img {
+    min-height: 50px;
+    min-width: 50px;
+    float: left;
+    margin-right: 20px;
+  }
+  h2 {
+    vertical-align: middle;
+  }
+}
+
+/* FEED */
+
 .feed-pic {
   max-height: 300px;
   max-width: 300px

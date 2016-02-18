@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     user.email = auth['info']['email']
     user.image_url = auth['info']['image']
     user.token = auth['credentials']['token']
-    user.token = auth['credentials']['secret']
+    user.secret_token = auth['credentials']['secret']
 
     user.save
     user
