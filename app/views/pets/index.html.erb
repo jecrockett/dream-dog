@@ -1,13 +1,37 @@
-<h1>Here are your potential perfect pets!</h1>
+<div class="pics-wrapper">
+  <h2>Here are your potential perfect pets!</h2>
 
-<% if @pets.nil? %>
-  <p>
-    Sorry! We couldn't find a suitable match.
-  </p>
-<% else %>
-  <% @pets.each do |dog| %>
-    <%= link_to dog["pageUrl"] do %>
-      <%= image_tag(dog["imageUrl"], class: "feed-pic") %>
-    <% end %>
-  <% end %>
-<% end %>
+  <div class="row">
+    <div class="col s12 l10 offset-l1">
+      <% if @pets.nil? %>
+        <p>
+          Sorry! We couldn't find a suitable match.
+        </p>
+      <% else %>
+        <% @pets.each do |pet| %>
+          <div class="pic-container">
+            <div class="card">
+              <div class="card-image">
+                <%= image_tag(pet["imageUrl"], class: "feed-pic") %>
+              </div>
+              <div class="card-content">
+                <span class="left-align truncate"><%= pet["petName"] %></span>
+              </div>
+              <div id="card-actions" class="card-action">
+                <%= form_for @new_pet do |f| %>
+                  <%= hidden_field_tag :name, pet["petName"] %>
+                  <%= hidden_field_tag :image_url, pet["imageUrl"] %>
+                  <%= hidden_field_tag :description, pet["description"] %>
+                  <%= hidden_field_tag :ad_url, pet["pageUrl"] %>
+                  <%= f.submit "Save", id: "submit-btn" %>
+                <% end %>
+                <!-- <%= link_to "Save", pets_path, method: :post %> -->
+                <%= link_to "See Advertisement", pet["pageUrl"] %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div> <!-- end of row -->
+</div>

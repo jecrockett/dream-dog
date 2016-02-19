@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :pets_users
+  has_many :pets, through: :pets_users
 
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(uid: auth['uid'], provider: auth['provider'])

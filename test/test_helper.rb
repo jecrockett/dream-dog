@@ -17,13 +17,13 @@ class ActiveSupport::TestCase
   twitter_hash = { 'provider' => 'twitter',
                     'uid' => '12345',
                     'info' => {
-                        'name' => 'billybob',
-                        'email' => 'billy@bob.com',
-                        'nickname' => 'BillyTheBob',
-                        'image_url' => 'http://www.showbizpizza.com/events/10th/rap/advbb/advbb_intropic.jpg'
+                        'name' => 'Carl',
+                        'email' => 'carl@carl.com',
+                        'nickname' => 'carl',
+                        'image_url' => 'http://www.jamsadr.com/files/Professional/247783b2-7566-4940-94ec-1c5fcab574fe/Presentation/HighResPhoto/West-Carl-900x1080.jpg'
                     },
-                    'credentials' => {'token' => 12343253456,
-                                      'secret' => 8917234172489014789023
+                    'credentials' => {'token' => 123412341234,
+                                      'secret' => 1234123412341234
                                     }
                     }
 

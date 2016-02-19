@@ -1,19 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  uid: MyString
-  provider: MyString
-  nickname: MyString
-  name: MyString
-  email: MyString
-  image_url: MyString
-  token: MyString
-
-two:
-  uid: MyString
-  provider: MyString
-  nickname: MyString
-  name: MyString
-  email: MyString
-  image_url: MyString
-  token: MyString
+carl:
+  uid: 12345
+  provider: twitter
+  nickname: carl
+  name: Carl
+  email: carl@carl.com
+  image_url: http://www.jamsadr.com/files/Professional/247783b2-7566-4940-94ec-1c5fcab574fe/Presentation/HighResPhoto/West-Carl-900x1080.jpg
+  token: 123412341234
+  secret_token: 1234123412341234

@@ -1,12 +1,18 @@
-<h1>Which of these looks like your perfect pet?</h1>
+<div class="pics-wrapper">
+  <h2>Which of these looks like your perfect pet?</h2>
 
-<div>
-  <% @twitter.inspiration("doggy-inspiration").each do |tweet| %>
-    <% if tweet.to_h[:entities] && tweet.to_h[:entities][:media] %>
-      <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
-      <%= link_to pets_path(image: @pic_url) do %>
-        <%= image_tag(@pic_url, class: "feed-pic") %>
+  <div class="row">
+    <div class="col s12 m10 offset-m1 l8 offset-l2">
+      <% @twitter.inspiration("doggy-inspiration").each do |tweet| %>
+        <% if tweet.to_h[:entities] && tweet.to_h[:entities][:media] %>
+          <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
+          <div class="pic-container">
+            <%= link_to pets_path(id: "pic-link", image: @pic_url) do %>
+              <%= image_tag(@pic_url, class: "feed-pic hoverable") %>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  <% end %>
+    </div>
+  </div> <!-- end of row -->
 </div>

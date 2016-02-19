@@ -12,7 +12,7 @@ class UserCanLoginViaTwitterTest < ActionDispatch::IntegrationTest
 
     assert dashboard_path, current_path
     within '.dashboard-content' do
-      assert page.has_content? "billybob"
+      assert page.has_content? "Carl"
     end
   end
 end

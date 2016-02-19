@@ -26,6 +26,10 @@ h1 {
 }
 
 h2 {
+  font-size: 2.5em;
+}
+
+h3 {
   font-size: 1.8em;
 }
 
@@ -66,14 +70,23 @@ $pink: #ffd8dc; //rgba(255, 216, 220, 100)
 .dashboard-wrapper {
   height: 100vh;
   width: 100%;
-  background-color: $tan;
+  background-color: $grayblue;
   text-align: center;
 }
 
+.find-more-btn {
+  color: $pink;
+  text-decoration: none;
+  border: 3px solid $pink;
+  border-radius: 6px;
+  padding: 20px;
+  }
+
 .dashboard-content {
   margin: 0 auto;
+  margin-bottom: 40px;
   padding-top: 50px;
-  width: 380px;
+  width: 420px;
   img {
     min-height: 50px;
     min-width: 50px;
@@ -87,7 +100,55 @@ $pink: #ffd8dc; //rgba(255, 216, 220, 100)
 
 /* FEED */
 
+.pics-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: $darkgrayblue;
+  text-align: center;
+  .row {
+    padding-top: 50px;
+  }
+  h2 {
+    padding-top: 20px;
+    color: $tan;
+  }
+}
+
+.pic-container {
+  margin: 10px;
+  display: inline-block
+}
+
 .feed-pic {
-  max-height: 300px;
-  max-width: 300px
+  height: 250px;
+}
+
+.card-image {
+  overflow: hidden;
+}
+
+/* RESULTS */
+
+.pics-wrapper .card-content {
+  width: 300px;
+  background-color: $tan;
+  color: $darkgrayblue;
+  span {
+    font-size: 20px;
+  }
+}
+
+#card-actions {
+  background-color: $tan;
+  a {
+  color: $darkgrayblue;
+  font-size: 12px;
+  border: 1px solid $darkgrayblue;
+  border-radius: 4px;
+  padding: 8px;
+  }
+}
+
+#submit-btn {
+  float:left;
 }

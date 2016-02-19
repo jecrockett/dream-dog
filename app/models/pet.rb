@@ -1,15 +1,15 @@
-class Pet
+class Pet < ActiveRecord::Base
+  has_many :pets_users
+  has_many :users, through: :pets_users
 
-  def self.all(image)
-    parsed_data = parse(Faraday.get("http://pets.vsapi01.com/api-search/by-url?url=#{image}&apikey=5c3f0bd0-ab92-4fcc-9947-ad43dfcc99ac"))
-    # exract key to application.yml
-    parsed_data["images"]
+  def self.find_or_create_from_auth(pet_info)
+    pet = Pet.find_or_create_by(ad_url: pet_info['ad_url'])
+
+    pet.name = pet_info['name']
+    pet.image_url = pet_info['image_url']
+    pet.description = pet_info['description']
+
+    pet.save
+    pet
   end
-
-  private
-
-    def self.parse(response)
-      JSON.parse(response.body)
-    end
-
 end
