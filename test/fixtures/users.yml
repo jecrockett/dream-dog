@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 carl:
-  uid: 12345
+  uid: 557354944
   provider: twitter
-  nickname: carl
-  name: Carl
-  email: carl@carl.com
+  nickname: jecrockett12
+  name: James Crockett
+  email: nil
   image_url: http://www.jamsadr.com/files/Professional/247783b2-7566-4940-94ec-1c5fcab574fe/Presentation/HighResPhoto/West-Carl-900x1080.jpg
-  token: 123412341234
-  secret_token: 1234123412341234
+  token: 557354944-Oq1xg9WhAYLsy17B3KN3gpMo88pTUWrwE81uQemP
+  secret_token: twMmaJZBGHmv1dAiYgXF4XK5SHmmUppXWz7TlSZtAEZ7P

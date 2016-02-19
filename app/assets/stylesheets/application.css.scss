@@ -68,7 +68,7 @@ $pink: #ffd8dc; //rgba(255, 216, 220, 100)
 
 /* DASHBOARD */
 .dashboard-wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: $grayblue;
   text-align: center;
@@ -96,6 +96,15 @@ $pink: #ffd8dc; //rgba(255, 216, 220, 100)
   h2 {
     vertical-align: middle;
   }
+}
+
+.pets-wrapper {
+  margin-top: 40px;
+}
+
+.twitter-logo {
+  height: 20px;
+  width: 20px;
 }
 
 /* FEED */
@@ -135,12 +144,13 @@ $pink: #ffd8dc; //rgba(255, 216, 220, 100)
   color: $darkgrayblue;
   span {
     font-size: 20px;
+    background-color: $tan;
   }
 }
 
 #card-actions {
   background-color: $tan;
-  a {
+  .ad-link {
   color: $darkgrayblue;
   font-size: 12px;
   border: 1px solid $darkgrayblue;

@@ -1,0 +1,16 @@
+<% @user.pets.each do |pet| %>
+  <div class="pic-container">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag(pet.image_url, class: "feed-pic") %>
+      </div>
+      <div class="card-content">
+        <span class="left-align truncate"><%= pet.name %></span>
+      </div>
+      <div id="card-actions" class="card-action">
+        <%= link_to "See Advertisement", pet.ad_url, class:"ad-link" %>
+        <%= link_to image_tag('/assets/twitter-logo.png', class: "twitter-logo"), new_tweet_path(ad: pet.ad_url) %>
+      </div>
+    </div>
+  </div>
+<% end %>

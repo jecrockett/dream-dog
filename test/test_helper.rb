@@ -22,8 +22,8 @@ class ActiveSupport::TestCase
                         'nickname' => 'carl',
                         'image_url' => 'http://www.jamsadr.com/files/Professional/247783b2-7566-4940-94ec-1c5fcab574fe/Presentation/HighResPhoto/West-Carl-900x1080.jpg'
                     },
-                    'credentials' => {'token' => 123412341234,
-                                      'secret' => 1234123412341234
+                    'credentials' => {'token' => '557354944-Oq1xg9WhAYLsy17B3KN3gpMo88pTUWrwE81uQemP',
+                                      'secret' => 'twMmaJZBGHmv1dAiYgXF4XK5SHmmUppXWz7TlSZtAEZ7P'
                                     }
                     }
 

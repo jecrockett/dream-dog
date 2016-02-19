@@ -1,5 +1,5 @@
 class TwitterService
-
+  attr_reader :client
   def initialize(user)
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = ENV["TWITTER_KEY"]
@@ -10,11 +10,11 @@ class TwitterService
   end
 
   def inspiration(list)
-    @client.list_timeline("jecrockett12", list, include_rts: false, count: 40)
+    client.list_timeline("jecrockett12", list, include_rts: false, count: 40)
   end
 
-  def show_pics(user)
-    @client.user_timeline(user, include_rts: false)
+  def tweet(content)
+    client.update(content, options={})
   end
 
 end

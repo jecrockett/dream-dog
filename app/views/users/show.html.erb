@@ -8,20 +8,16 @@
     <h2 class="valign truncate"><%= @user.name %></h2>
   </div>
   <%= link_to "Find More Perfect Pets", feed_path, class: "find-more-btn" %>
-  <div class="saved-pets">
+  <div class="pets-wrapper container">
     <h3>Saved Pets</h3>
-    <% if @saved.nil? %>
-      <p>
-        You have no saved pets!
-      </p>
-    <% else %>
-    <div>
-      <% @saved.each do |pet| %>
-        <div class="pet-conainer">
-
-        </div>
+    <div class="saved-pets">
+      <% if @user.pets.nil? %>
+        <p>
+          You have no saved pets!
+        </p>
+      <% else %>
+        <%= render 'users/pets' %>
       <% end %>
     </div>
-    <% end %>
   </div>
 </div>

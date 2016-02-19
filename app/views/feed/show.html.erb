@@ -7,7 +7,7 @@
         <% if tweet.to_h[:entities] && tweet.to_h[:entities][:media] %>
           <% @pic_url = tweet.to_h[:entities][:media][0][:media_url_https] %>
           <div class="pic-container">
-            <%= link_to pets_path(id: "pic-link", image: @pic_url) do %>
+            <%= link_to pets_path(image: @pic_url), id: "pic-link" do %>
               <%= image_tag(@pic_url, class: "feed-pic hoverable") %>
             <% end %>
           </div>

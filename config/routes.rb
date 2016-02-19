@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get "feed", to: "feed#show"
   resources :pets, only: [:index, :show, :create]
+  resources :tweets, only: [:new, :create]
+
 
   get "auth/twitter", as: :twitter_login
   get "auth/:provider/callback", to: "sessions#create"
