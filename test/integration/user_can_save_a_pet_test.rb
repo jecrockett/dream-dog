@@ -21,8 +21,6 @@ class UserCanSaveAPet < ActionDispatch::IntegrationTest
 
     assert current_path, pets_path
 
-    save_and_open_page
-
     within first('.pic-container') do
       click_on "Save"
     end

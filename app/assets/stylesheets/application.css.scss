@@ -40,6 +40,14 @@ $tan: #e8dfd5; //rgba(232, 223, 213, 100)
 $pink: #ffd8dc; //rgba(255, 216, 220, 100)
 
 /* HOME PAGE */
+
+nav {
+  background-color: $tan;
+  ul a, .brand-logo {
+    color: $darkgrayblue;
+  }
+}
+
 .home-wrapper {
   text-align: center;
   height: 100vh;
